@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Register</h1>
+
+            <form method="POST" action="/register">
+                <input placeholder="Username" name="username" type="text"/>
+                <input placeholder="Password" name="password" type="password"/>
+                <input type="submit" value="Register"/>
+            </form>
+
+            {{#showErrors}}
+            <ul class="error-div">
+                {{#errors}}
+                <li>{{.}}</li>
+                {{/errors}}
+            </ul>
+            {{/showErrors}}
+
+        </div>
+
+    </body>
+</html>
